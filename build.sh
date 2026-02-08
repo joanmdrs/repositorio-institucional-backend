@@ -8,6 +8,7 @@ python manage.py migrate
 
 python manage.py create_user_groups
 
-if [[$CREATE_SUPERUSER == "true"]]; then
+if [[$CREATE_SUPERUSER]]; 
+then
     python manage.py createsuperuser --noinput 
 fi
